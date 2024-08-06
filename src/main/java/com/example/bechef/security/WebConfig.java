@@ -12,10 +12,10 @@ public class WebConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")    // 모든 주소 적용됨
                //.allowedOrigins("http://localhost:3000") /// 테스트용 도메인
-                //.allowedOrigins("https://delightful-meadow-09cec9100.5.azurestaticapps.net") // 배포용 도메인
+                //.allowedOrigins("https://mango-sand-0aec9c100.5.azurestaticapps.net") // 배포용 도메인
                 .allowedOriginPatterns(
                         "http://localhost:3000",
-                        "https://icy-water-02a4fb800.5.azurestaticapps.net"
+                        "https://mango-sand-0aec9c100.5.azurestaticapps.net"
                 ) // 여러 출처 동시에 허용
 
                 .allowedMethods("GET", "POST", "PUT", "DELETE","OPTIONS") // HTTP request 메서드 허용
@@ -24,7 +24,7 @@ public class WebConfig implements WebMvcConfigurer {
                 .allowCredentials(true); // 클라이언트 관련 메소드
         //config.setAllowedOrigins(Arrays.asList(
         //        "http://localhost:3000",
-        //        "https://delightful-meadow-09cec9100.5.azurestaticapps.net"
+        //        "https://mango-sand-0aec9c100.5.azurestaticapps.net"
         //));
     }
 }
